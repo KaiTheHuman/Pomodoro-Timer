@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pomodoro Timer</title>
+        <!-- input style sheet-->
+        <link rel="stylesheet" href="timerStyle.css"/>
+    </head>
+
+    <body>
+         <!-- Basic Navbar, the links dont go anywhere -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </br>
+        <!-- SVG is in a flex div so that the apple is always centered -->
+        <div class="flex">
+            <!-- SVG box -->
+        <svg width="400" height="400">
+            <!-- stem -->
+            <rect x="196" y="50" width="8" height="100" fill="green" />
+            <!-- apple -->
+            <circle cx=200 cy=200 r="100" fill="red" />
+            <!-- Leaf -->
+            <ellipse rx="50" ry="20" cx="250" cy="80" fill="green"></ellipse>
+            <!-- Background rectangle for when timer turns red -->
+            <rect x="115" y="150" width="170" height="100" fill="red" rx="5" ry="5" id="rec"/>
+            <!-- Timer text -->
+            <text x="200" y="210" font-size="35" text-anchor="middle" id="timer">00:00</text>
+          </svg>
+        </div>
+        <!-- Flex Div for the buttons-->
+          <div class="flex">
+            <!-- 3 buttons with unique ID's -->
+        <button class="button" id="start" onclick="myStart()">Start </button>
+        <button class="button" id="paused" onclick="pause()">pause</button>
+        <button class="button" id="stop" onclick="myStop()">Stop</button>
+        </div>
+    </body>
+
+<!-- JS input -->
+    <script src="script.js"></script>
+</html>
